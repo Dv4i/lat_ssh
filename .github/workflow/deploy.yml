@@ -20,8 +20,8 @@ jobs:
 
     - name: Deploy to ECS
       run: |
-        ssh -o StrictHostKeyChecking=no  ubuntu@3.25.80.209 << 'EOF'
-        cd /var/www/halal
+        ssh -o StrictHostKeyChecking=no ubuntu@13.239.37.28 << 'EOF'
+        cd /var/www/html/cicd/lat_ssh
         git pull origin main
         # Restart Nginx or any other service if needed
         sudo systemctl restart nginx
